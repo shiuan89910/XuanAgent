@@ -115,6 +115,8 @@ python google_search_api.py
 
 ### 3.6.3. book_ticket，執行以下命令
 ```bash
+# 注意：在 book_ticket.py 檔中 param_sp = {"model_id": f"{root_path}\\whisper-medium", ... } 的 "model_id" 預設模型與目錄名稱是 "whisper-medium"
+# 注意：在 book_ticket.py 檔中 param_op = {"model": f"{root_path}\\ocr-captcha\\output_small", ... } 的 "model" 預設模型與目錄名稱是 "ocr-captcha\\output_small"
 # 打開 book_ticket.py 檔，設定 config = { ... } 內的設定值
 
 python book_ticket.py
