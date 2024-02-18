@@ -115,7 +115,11 @@ python google_search_api.py
 
 ### 3.6.3. book_ticket，執行以下命令
 ```bash
+# 打開 book_ticket.py 檔，設定 config = { ... } 內的設定值
+
 python book_ticket.py
+
+# 輸入 URL
 ```
 
 ### 3.6.4. gpt_api，執行以下命令
