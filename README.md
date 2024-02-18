@@ -7,7 +7,7 @@
 - 大型語言模型（Large Language Model, LLM）驅動的自主代理系統
 本文概述了 LLM 驅動的自主代理系統的關鍵組件和功能。更多詳細信息，請參考[Lilian Weng's Blog](https://lilianweng.github.io/posts/2023-06-23-agent/)。
 
-在一個 LLM 驅動的自主代理（Autonomous Agent）系統中，LLM 充當代理的大腦，並由幾個關鍵組件：
+- 在一個 LLM 驅動的自主代理（Autonomous Agent）系統中，LLM 充當代理的大腦，並由幾個關鍵組件：
 ![Overview of a LLM-powered autonomous agent system](https://lilianweng.github.io/posts/2023-06-23-agent/agent-overview.png "Overview of a LLM-powered autonomous agent system")
 
 
