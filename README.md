@@ -1,9 +1,9 @@
 # 0. 目錄
 
 
+
 # 1. XuanAgent 專案簡介
 透過大型語言模型智能代理，用於加強 AI 系統的決策能力，提升代理的學習效率和適應性。
-
 - 大型語言模型（Large Language Model, LLM）驅動的自主代理系統
 本文概述了 LLM 驅動的自主代理系統的關鍵組件和功能。更多詳細信息，請參考[Lilian Weng's Blog](https://lilianweng.github.io/posts/2023-06-23-agent/)。
 
@@ -43,3 +43,6 @@
 
 # 3. 致謝
 本專案的參考來源，特此致謝
+[Lilian Weng's Blog](https://lilianweng.github.io/posts/2023-06-23-agent/)
+
+[langchain-ai 的 langchain](https://github.com/langchain-ai/langchain)
