@@ -220,6 +220,7 @@ python gpt_api.py
 
 # 4. 致謝
 本專案的參考來源，特此致謝
+
 [Lilian Weng's Blog](https://lilianweng.github.io/posts/2023-06-23-agent/)
 
 [langchain-ai 的 langchain](https://github.com/langchain-ai/langchain)
