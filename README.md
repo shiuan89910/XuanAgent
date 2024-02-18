@@ -124,7 +124,11 @@ python book_ticket.py
 
 ### 3.6.4. gpt_api，執行以下命令
 ```bash
+# 打開 gpt_api.py 檔，在此行 ga = GPTAPI("mail", "password") 的 "mail" 與 "password" 輸入 Google 登入帳號與密碼
+
 python gpt_api.py
+
+# 輸入 URL
 ```
 
 
