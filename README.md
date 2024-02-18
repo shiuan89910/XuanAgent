@@ -41,6 +41,22 @@
 
 
 
+# 2. 專案流程圖
+## 2.1. XuanAgent 專案流程圖
+![XuanAgent Project Flowchart](https://github.com/shiuan89910/XuanProjectData/blob/main/XuanAgent/xuanagent_project_flowchart.png)
+
+### 2.1.1 組件說明
+- `llm_agent.py`：系統的主要代理程式，負責協調和管理下層的各個模塊。
+- `gpt_api.py`：與 GPT 模型交互的接口，用於處理與大型語言模型相關的 API 請求。
+- `Open LLM Model`：開源的大型語言模型，用於執行複雜的自然語言處理任務。
+
+### 2.1.2 工具
+- `google_search_api.py`：Google搜索的工具。
+- `Book_ticket.py`：預訂票務的工具。
+- `Web Automation Tools`：實現網站自動化各種任務的工具。
+
+
+
 # 3. 安裝與入門指南
 ## 3.1. 安裝 Conda
 首先，安裝 Conda 環境管理器。推薦使用 Miniconda，因為它比 Anaconda 更輕量。可以從以下連結下載安裝：
