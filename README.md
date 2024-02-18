@@ -96,6 +96,11 @@ pip install -r requirements.txt
 ## 3.6. 啟動 .py 檔
 ### 3.6.1. llm_agent，執行以下命令
 ```bash
+# 打開 llm_agent.py 檔，在此行 model_dir = os.path.join(root_path, "Mistral-7B-Instruct-v0.1-GPTQ") 的 "Mistral-7B-Instruct-v0.1-GPTQ" 輸入 LLM (GPTQ 量化模型) 的目錄名稱
+# 透過 llm_agent.py 檔的 ga.run_agent("how many letters in the word educa") 使用單詞長度計算工具
+# 透過 llm_agent.py 檔註解掉的 ga.run_agent("What is 2123 * 215123") 使用數學問題解答工具
+# 透過 llm_agent.py 檔註解掉的 ga.run_agent("What is the current price of Microsoft stock") 使用股票價格查詢工具
+
 python llm_agent.py
 ```
 
