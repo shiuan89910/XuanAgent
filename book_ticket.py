@@ -13,6 +13,7 @@ from modelscope.utils.constant import Tasks
 from PIL import Image, ImageEnhance, ImageFilter
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.selenium_manager import SeleniumManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
@@ -186,12 +187,24 @@ class BookTicket():
         try:
             if self.op == None:
                 return None
+            #self.op.add_argument('--disable-dev-shm-usage')
+            self.op.add_argument("--disable-gpu")  
+            self.op.add_argument("--disable-infobars")
+            self.op.add_argument("--disable-popup-blocking")
             self.op.add_argument("headless")
+            self.op.add_argument("--ignore-certificate-errors")
+            self.op.add_argument("--incognito")
+            #self.op.add_argument('--no-sandbox')
             self.op.add_argument(f"user-agent={UserAgent.random}")
-            self.op.add_argument("user-data-dir=./")
+            #self.op.add_argument("user-data-dir=./")
+            #self.op.add_argument("--window-size=1920,1080")
             self.op.add_experimental_option("detach", True)
             self.op.add_experimental_option("excludeSwitches", ["enable-logging"])
-            return uc.Chrome(chrome_options=self.op)
+            return uc.Chrome(
+                chrome_options=self.op, 
+                service=SeleniumManager().driver_location(webdriver.ChromeOptions()), 
+                keep_alive=True,
+                )
         except Exception as e:
             logging.error(f"_init_driver() ERR: {e}")
             return None
