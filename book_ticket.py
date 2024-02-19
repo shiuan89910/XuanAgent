@@ -209,7 +209,7 @@ class BookTicket():
 
     def get_code(self):
         """獲取車次代碼"""
-        return self.code
+        return f"{self.code}"
 
     def time_to_minutes(self, time_str):
         """將時間字串轉換為分鐘"""
@@ -503,6 +503,7 @@ def main(**kwargs):
             continue
         succ = bt.book_pg_5(**param_book_pg_5)
         code = bt.get_code()
+        #logging.info(code)
         bt.close()
         if succ:
             break
