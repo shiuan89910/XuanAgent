@@ -350,8 +350,7 @@ class BookTicket():
         try:
             time.sleep(kwargs["sleep_sec"])
             details = self.wait_find_elements(kwargs["details"])
-            details_info = details.find_element(By.TAG_NAME, kwargs["details_tag_name"])
-            if kwargs["details_success"] in details_info.text:
+            if kwargs["details_success"] in details.text:
                 self.driver.save_screenshot(kwargs["img_details_path"])
                 logging.info("訂位成功")
                 return True
@@ -441,8 +440,7 @@ def main(**kwargs):
     param_book_pg_5 = {
         # 預訂票務第 5 頁參數
         "sleep_sec": kwargs["pg_5_delay_sec"],
-        "details": "//p[@class=\"alert-title\"]",
-        "details_tag_name": "span",
+        "details": "//p[@class=\"alert-title\"]//span",
         "details_success": "您已完成訂位",
         "img_details_path": kwargs["img_details_path"],
         }
