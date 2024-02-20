@@ -315,8 +315,8 @@ class BookTicket():
             time_within_range = [t for t in train_group if self.time_to_minutes(kwargs["time_start"]) <= self.time_to_minutes(t.get_attribute(kwargs["train_group_departure"])) <= self.time_to_minutes(kwargs["time_end"])]
             if time_within_range:
                 minutes_list = [self.time_to_minutes(t.get_attribute(kwargs["train_group_estimated"])) for t in time_within_range]
-                list_idx = max(minutes_list) if kwargs.get("max_time", False) else min(minutes_list)
-                target_element = time_within_range[minutes_list.index(list_idx)]
+                max_min = max(minutes_list) if kwargs.get("max_time", False) else min(minutes_list)
+                target_element = time_within_range[minutes_list.index(max_min)]
                 target_element.click()
                 self.code = target_element.get_attribute(kwargs["train_group_code"]) 
             else:
