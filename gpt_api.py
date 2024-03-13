@@ -80,7 +80,7 @@ class GPTAPI():
                 time.sleep(kwargs.get("refresh_sec", 1))
                 break
             except:
-                idx += 1      
+                idx += 1
 
     def login(self, **kwargs):
         """登入操作"""
@@ -119,14 +119,13 @@ class GPTAPI():
 
 
 def main():
-    url = input("請輸入 URL:")
     param_refresh = {
         "refresh": "//button[@class=\"text-token-text-primary\"]",
         "refresh_sec": 1,
         }
     
     param_login = {
-        "url": url,
+        "url": "",
         "btn_login": "//button[@data-testid=\"login-button\"]",
         "btn_google": "//button[@data-provider=\"google\"]",
         "txt_mail": "//input[@type=\"email\"]",
